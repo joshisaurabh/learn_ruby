@@ -4,9 +4,7 @@ describe "some silly block functions" do
 
   describe "reverser" do
     it "reverses the string returned by the default block" do
-      result = reverser do
-        "hello"
-      end
+      result = reverser
       result.should == "olleh"
       # You might be tempted to ask yourself what the hell is happening here.
       # Well no worries! Superman is here to the rescue!

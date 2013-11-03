@@ -1,18 +1,19 @@
 require 'book'
 
 describe Book do
-
+ 
   # Before every test...
   before do
     # do this. (before is a method given to use by RSpec.)
-    @book = Book.new
+    @book = Book.new    #SJ Comment - @book basically represents creating a new instance of Book and @book is just a name of the instance
   end
+
 
   describe 'title' do
     it 'should capitalize the first letter' do
       # @book is a variable that was defined in the before do-end block.
-      @book.title = "inferno"
-      @book.title.should == "Inferno"
+      @book.title = "inferno"  # SJ comment - this is basically asking for defining writter method "title="
+      @book.title.should == "Inferno" # SJ comment - this is asking for "title" method to return any title passed as parameter,to be capitalized
       # Another way of saying these two lines is after we set the title of the book, when we get its title
       # it should be capitalized properly. 
       # We set the title of the book with @book.title = "inferno"
@@ -36,8 +37,8 @@ describe Book do
     end
 
     it 'should capitalize every word' do
-      @book.title = "stuart little"
-      @book.title.should == "Stuart Little"
+      @book.title = "stuart little" # SJ comment - this basically means that the writer method "title=" is being used to pass "stuart little" as a paramenter value
+      @book.title.should == "Stuart Little" #SJ comment - this means that the method "title" should return capitalized both the words 
     end
 
     describe 'should capitalize every word except...' do
